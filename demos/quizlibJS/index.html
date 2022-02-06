@@ -1,0 +1,62 @@
+<!-- Try this example at https://alpsquid.github.io/quizlib -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Quizlib Simple-Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./css/quizlib.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" media="screen">
+</head>
+
+<body>
+    <!-- Quiz Results -->
+    <div id="quiz-result" class="card">
+        You Scored <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span id="quiz-max-score"></span><br/>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz">
+        <h2>Quiz</h2>
+        <!-- Question 1 -->
+        <div class="card quizlib-question">
+            <div class="quizlib-question-title">1. Cuantos años tiene Diego?</div>
+            <div class="quizlib-question-answers">
+                <input type="text" name="q1">
+            </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="card quizlib-question">
+            <div class="quizlib-question-title">2. El padre de tu enemigo...</div>
+            <div class="quizlib-question-answers">
+                <ul>
+                    <li><label><input type="radio" name="q2" value="a"> PHP</label></li>
+                    <li><label><input type="radio" name="q2" value="b"> Depende de lo que vayas a desarrollar</label></li>
+                    <li><label><input type="radio" name="q2" value="c"> Javascript</label></li>
+                    <li><label><input type="radio" name="q2" value="d"> Python</label></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="card quizlib-question">
+            <div class="quizlib-question-title">3. ¿Qué factores contribuirán al fin de la humanidad tal y como la conocemos?</div>
+            <div class="quizlib-question-answers">
+                <ul>
+                    <li><label><input type="checkbox" name="q3" value="a"> Calentamiento global</label></li>
+                    <li><label><input type="checkbox" name="q3" value="b"> Descontrol diplomatico para una guerra mundial</label></li>
+                    <li><label><input type="checkbox" name="q3" value="c"> Los gatos</label></li>
+                    <li><label><input type="checkbox" name="q3" value="d"> Desbordamiento de avances en la inteligencia artificial</label></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Answer Button -->
+        <button type="button" onclick="showResults();">Comprobar las respuestas</button>
+    </div>
+
+    <!-- Quizlib -->
+    <script type="text/javascript" src="./js/quizlib.js"></script>
+    <script type="text/javascript" src="./js/simple-quiz.js"></script>
+</body>
+
+</html>

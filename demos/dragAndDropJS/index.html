@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Drag & Drop</title>
+    <style>
+        /* Cambio del modelo de caja para maquetar teniendo 
+        en cuenta border y padding dentro del tamaño de elementos */
+        
+        html {
+            box-sizing: border-box;
+        }
+        
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+        }
+        
+        .glyphicon-move {
+            cursor: move;
+            cursor: -webkit-grabbing;
+        }
+        
+        main {
+            margin: 0 20% 0 20%;
+        }
+    </style>
+    <!-- minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- Simple List -->
+        <h1>Lista simple</h1>
+        <div id="simpleList" class="list-group">
+            <div class="list-group-item">Aquí el repositorio de la libreria <a href="https://github.com/SortableJS/Sortable" target="_blank" rel="noopener noreferrer">Sortable</a></div>
+            <div class="list-group-item">Un demo completo en <a href="http://sortablejs.github.io/Sortable" target="_blank" rel="noopener noreferrer">Git pages</a></div>
+            <div class="list-group-item">Presenta varias opciones de parametros para implementar.</div>
+            <div class="list-group-item">Funciona con flexbox, bootstrap o fuera de la caja.</div>
+            <div class="list-group-item">Simplemente arrastre algunos elementos.</div>
+        </div>
+
+
+        <!-- List with handle -->
+        <h1>Lista de contenedores con handle</h1>
+        <div id="listWithHandle" class="list-group">
+            <div class="list-group-item">
+                <span class="badge">3</span>
+                <span class="glyphicon glyphicon-move" aria-hidden="true"></span> Arrástrame por el cursor para movimiento
+            </div>
+            <div class="list-group-item">
+                <span class="badge">2</span>
+                <span class="glyphicon glyphicon-move" aria-hidden="true"></span> También puede seleccionar el texto
+            </div>
+            <div class="list-group-item">
+                <span class="badge">1</span>
+                <span class="glyphicon glyphicon-move" aria-hidden="true"></span> Tiene soporte para dispositivos moviles
+            </div>
+        </div>
+    </main>
+
+    <!-- Sortable -->
+    <script src="./js/Sortable.min.js"></script>
+    <script>
+        // Simple list
+        Sortable.create(simpleList, { /* options */ });
+
+        // List with handle
+        Sortable.create(listWithHandle, {
+            handle: '.glyphicon-move',
+            animation: 150
+        });
+    </script>
+
+</body>
+
+</html>
