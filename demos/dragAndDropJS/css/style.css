@@ -1,0 +1,35 @@
+/* Cambio del modelo de caja para maquetar teniendo 
+        en cuenta border y padding dentro del tamaño de elementos */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.glyphicon-move {
+    cursor: move;
+    cursor: -webkit-grabbing;
+}
+
+#simpleList .list-group-item,
+.glyphicon-move {
+    cursor: move;
+}
+
+main {
+    margin: 0 10% 0 10%;
+}
+
+
+/****** MEDIA QUERIES PARA CELULARES ******/
+
+@media screen and (max-width:425px) {
+    main {
+        margin: 0 10px 0 10px;
+    }
+}

@@ -1,6 +1,6 @@
 /**
-* Try this example at https://alpsquid.github.io/quizlib
-*/
+ * Try this example at https://alpsquid.github.io/quizlib
+ */
 
 var quiz;
 
@@ -19,7 +19,7 @@ function showResults() {
         else if (quizScorePercent >= 50) quizResultElement.style.backgroundColor = '#ffc107';
         else if (quizScorePercent >= 25) quizResultElement.style.backgroundColor = '#ff9800';
         else if (quizScorePercent >= 0) quizResultElement.style.backgroundColor = '#f44336';
-        
+
         // Highlight questions according to whether they were correctly answered. The callback allows us to highlight/show the correct answer
         quiz.highlightResults(handleAnswers);
     }
@@ -32,7 +32,7 @@ function handleAnswers(quiz, question, no, correct) {
     if (!correct) {
         var answers = question.getElementsByTagName('input');
         for (var i = 0; i < answers.length; i++) {
-            if (answers[i].type === "checkbox" || answers[i].type === "radio"){ 
+            if (answers[i].type === "checkbox" || answers[i].type === "radio") {
                 // If the current input element is part of the correct answer, highlight it
                 if (quiz.answers[no].indexOf(answers[i].value) > -1) {
                     answers[i].parentNode.classList.add(Quiz.Classes.CORRECT);
@@ -52,8 +52,7 @@ function handleAnswers(quiz, question, no, correct) {
 
 window.onload = function() {
     quiz = new Quiz('quiz', [
-        '42',
-        'b',
-        ['b', 'c', 'd']
+        '31',
+        'b', ['b', 'c', 'd']
     ]);
 };
