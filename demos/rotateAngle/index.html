@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rotater {
+            transition: all 0.3s ease;
+            border: 0.0625em solid black;
+            border-radius: 3.75em;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <img id="img" src="https://c.tenor.com/NNCWMHxobR8AAAAi/rafsdesign-rafs.gif" alt="flecha de selección" width="200px" />
+            <button onClick="rotateImg()">Rotar flecha</button><br>
+        </div>
+        <div class="container">
+            <figure>
+                <img id="rotater" onclick="rotate(this)" src="https://upload.wikimedia.org/wikipedia/en/e/e0/Iron_Man_bleeding_edge.jpg" />
+                <figcaption>Rota la imagen dando click en si misma</figcaption>
+            </figure>
+        </div>
+
+    </main>
+
+    <script>
+        let rotation = 0;
+
+        function rotateImg() {
+            rotation += 60;
+            if (rotation === 360) {
+                rotation = 0;
+            }
+            document.querySelector("#img ").style.transform = `rotate(${rotation}deg)`;
+        }
+
+
+
+        let rotateAngle = 60;
+
+        function rotate(image) {
+            image.setAttribute("style", "transform: rotate( " + rotateAngle + "deg) ");
+            rotateAngle = rotateAngle + 60;
+        }
+    </script>
+</body>
+
+</html>
