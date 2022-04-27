@@ -36,7 +36,7 @@
 .buttonImage2.selected,
 .buttonImage3.selected {
     background-color: #FFFFFF;
-    border: 2px solid #1E96D4;
+    border: 5px solid #1E96D4;
     box-shadow: 0 0 0 3px rgb(238, 239, 242);
     border-color: #1E96D4;
 }
@@ -79,7 +79,12 @@ img.ImgSecond {
 
 .checkeable input:checked+img {
     background-color: #FFFFFF;
-    border: 2px solid #FF6363;
+    border: 5px dashed #FF6363;
     box-shadow: 0 0 0 3px rgb(238, 239, 242);
     border-color: #FF6363;
+}
+
+.ImgFirst,
+.ImgSecond {
+    width: 250px !important;
 }
