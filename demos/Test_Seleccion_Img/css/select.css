@@ -1,0 +1,90 @@
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+}
+
+.containerImages {
+    display: flex;
+}
+
+.Image {
+    padding: 7px;
+}
+
+.buttonImage1,
+.buttonImage2,
+.buttonImage3 {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 2px solid #EEEFF2;
+    cursor: pointer;
+    outline: 0;
+}
+
+.buttonImage1:hover,
+.buttonImage2:hover,
+.buttonImage3:hover {
+    background-color: #FFFFFF;
+    border: 2px solid #B6BCC6;
+}
+
+.buttonImage1.selected,
+.buttonImage2.selected,
+.buttonImage3.selected {
+    background-color: #FFFFFF;
+    border: 5px solid #1E96D4;
+    box-shadow: 0 0 0 3px rgb(238, 239, 242);
+    border-color: #1E96D4;
+}
+
+.buttonImage1.notSelected,
+.buttonImage2.notSelected,
+.buttonImage3.notSelected {
+    background-color: #FFFFFF;
+    border: 2px solid #B7BDC7;
+    box-shadow: 0 0 0 3px rgb(238, 239, 242);
+}
+
+
+/**/
+
+.checkImg {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    cursor: pointer;
+    margin: 0 10px;
+    outline: 0;
+}
+
+.checkeable input {
+    display: none;
+}
+
+img.ImgSecond {
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+    margin-top: 3%;
+}
+
+.checkeable input {
+    display: none;
+}
+
+.checkeable input:checked+img {
+    background-color: #FFFFFF;
+    border: 5px dashed #FF6363;
+    box-shadow: 0 0 0 3px rgb(238, 239, 242);
+    border-color: #FF6363;
+}
+
+.ImgFirst,
+.ImgSecond {
+    width: 250px !important;
+}

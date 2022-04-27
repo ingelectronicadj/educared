@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona imagenes</title>
+    <link rel="stylesheet" href="./css/select.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- seleccionar solo una imagen -->
+        <div class="containerImages">
+            <div class="Image">
+                <button class="buttonImage1" onclick="myFunction(1)">
+                      <img class="ImgFirst" src="https://http.cat/404" alt="Image2"/>
+                </button>
+            </div>
+            <div class="Image">
+                <button class="buttonImage2" onclick="myFunction(2)">
+                    <img class="ImgFirst" src="https://http.cat/100" />
+                </button>
+            </div>
+            <div class="Image">
+                <button class="buttonImage3" onclick="myFunction(3)">
+                    <img class="ImgFirst" src="https://http.cat/420" alt="Image4"/>
+                </button>
+            </div>
+        </div>
+        <!-- seleccion estilo checkbox -->
+        <div class="containerImages">
+            <div class="checkImg">
+                <label class="checkeable">
+                    <input type="checkbox" name="cap1"/>
+                    <img class="ImgSecond" src="https://http.cat/400" alt=""/>
+                </label>
+            </div>
+
+            <div class="checkImg">
+                <label class="checkeable">
+                    <input type="checkbox" name="cap2"/>
+                    <img class="ImgSecond" src="https://http.cat/402" alt=""/>
+                </label>
+            </div>
+            <div class="checkImg">
+                <label class="checkeable">
+                    <input type="checkbox" name="cap2"/>
+                    <img class="ImgSecond" src="https://http.cat/200" alt=""/>
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/select.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- ************** test1 ********** -->
+        <div class="test_1">
+            <h4>Test: label que desaparecen</h4>
+            <p>arrastre la imagen de 100x100 a algunas de las cajas</p>
+            <div class="test1_content">
+                <!-- ondrop="drop(event)" aqui llamaos la funcion drop el evento que se produce cuando se suelta aqui el elemento -->
+                <div id="drop0" class="dropdiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    Drag&Drop Area 1
+                </div>
+
+                <div id="drop1" class="dropdiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    Drag&Drop Area 2
+                </div>
+                <!-- ondragstart llama una funcion que especifica que datos se arrastran -->
+                <!-- draggable="true"  hace que el elemnto sea dragueable -->
+                <img src="https://dummyimage.com/100" ondragstart="drag(event)" draggable="true" id="drag1" />
+            </div>
+
+        </div>
+        <!-- ****************** test 2 ****************** -->
+        <div class="test_2">
+            <h4>Test2</h4>
+            <p>arrastre las imagenes 1 y 2 a las diferentes cajas</p>
+            <div class="test1_content">
+                <div id="drop2" class="dropdiv" ondrop="drop2(event)" ondragover="allowDrop(event)">
+
+                </div>
+
+                <div id="drop3" class="dropdiv" ondrop="drop3(event)" ondragover="allowDrop(event)">
+
+                </div>
+
+                <img src="img/1.png" ondragstart="drag(event)" draggable="true" id="drag2" />
+                <img src="img/2.png" ondragstart="drag(event)" draggable="true" id="drag3" />
+            </div>
+            <!-- ************** test 3 ************* -->
+            <div class="test_3">
+                <h4>Test3</h4>
+                <p>arrastre las imagenes a las diferentes cajas</p>
+                <div class="test1_content">
+                    <div class="content_dropdiv4">
+                        <div id="drop4" class="dropdiv4" ondrop="drop4(event)" ondragover="allowDrop(event)"> </div>
+                        <p id="text1"></p>
+                        <p id="text2"></p>
+                    </div>
+
+                    <div class="content_drop5">
+                        <div id="drop5" class="dropdiv5" ondrop="drop5(event)" ondragover="allowDrop(event)"></div>
+                        <p id="box2"></p>
+                    </div>
+
+
+                    <img src="img/3.png" class="img3" ondragstart="drag(event)" draggable="true" id="drag4" />
+                    <img src="img/4.png" class="img4" ondragstart="drag(event)" draggable="true" id="drag5" />
+                    <img src="img/5.png" ondragstart="drag(event)" draggable="true" id="drag6" />
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/drag_drop.js"></script>
+</body>
+
+</html>
